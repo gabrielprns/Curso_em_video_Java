@@ -122,12 +122,12 @@ public class TelaIdade extends javax.swing.JFrame {
         jLabel3.setText(Integer.toString(idade));
         String sit = (idade>=18)?"Maior de Idade":"Menor de Idade";
         jLabel5.setText(sit);
-        if ((idade>=16 && idade<18)||(idade>70)) {
-             obs= "Voto Opcional";
+        if ((idade>=0 && idade<=15)) {
+             obs= "Não vota";
         }
         
-        else if ((idade>=0 && idade<=15)) {
-             obs= "Não Vota";
+        else if ((idade>=16 && idade<18)||(idade>70)) {
+             obs= "Voto Opcional";
         }
         
         else{
