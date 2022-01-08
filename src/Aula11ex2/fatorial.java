@@ -34,6 +34,7 @@ public class fatorial extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         txtN.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        txtN.setModel(new javax.swing.SpinnerNumberModel(1, 1, 12, 1));
         txtN.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 txtNStateChanged(evt);
@@ -57,8 +58,8 @@ public class fatorial extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblFat)
-                .addContainerGap(157, Short.MAX_VALUE))
+                .addComponent(lblFat, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -79,6 +80,12 @@ public class fatorial extends javax.swing.JFrame {
         int n = Integer.parseInt(txtN.getValue().toString());
         int fat = 1;
         int cont=n ;
+        while (cont>=1){
+            fat*=cont;
+            cont -- ;
+            
+        }
+        lblFat.setText(Integer.toString(fat));
     }//GEN-LAST:event_txtNStateChanged
 
     /**
