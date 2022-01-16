@@ -10,7 +10,7 @@ package Aula15ex1;
  * @author Usuario
  */
 public class operacao1 {
-    String soma(int i, int f){
+    public static String contador(int i, int f){
         String s="";
         for(int c=1;c<=f;c++){
             s+=c;
